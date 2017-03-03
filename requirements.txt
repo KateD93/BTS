@@ -1,0 +1,4 @@
+Django==1.8.17
+djangorestframework==3.5.4
+django-filters==0.2.1 
+psycopg2==2.7
