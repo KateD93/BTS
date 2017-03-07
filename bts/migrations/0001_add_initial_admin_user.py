@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.db import migrations
-from django.contrib.auth.models import User
 from django.conf import settings
+from django.contrib.auth import models
+from django.db import migrations
 
 
 def create_admin_user(apps, schema_editor):
-    User.objects.create_user(
+    models.User.objects.create_user(
         username=settings.INITIAL_ADMIN_EMAIL,
         email=settings.INITIAL_ADMIN_EMAIL,
         password=settings.INITIAL_ADMIN_PASSWORD
