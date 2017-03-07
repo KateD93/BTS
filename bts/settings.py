@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'bts.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgres_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'bts',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
@@ -105,3 +105,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+INITIAL_ADMIN_EMAIL = 'admin@gmail.com'
+
+INITIAL_ADMIN_PASSWORD = 'admin_password'
+
+
