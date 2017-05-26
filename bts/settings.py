@@ -25,8 +25,7 @@ SECRET_KEY = '&-nhpdal#d6p#t7kqzhhof*-vj@2!u7mn%+q!01l5=)-hucwy7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -38,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bts',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,7 +100,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
@@ -110,4 +109,9 @@ INITIAL_ADMIN_EMAIL = 'admin@gmail.com'
 
 INITIAL_ADMIN_PASSWORD = 'admin_password'
 
-
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAdminUser',
+    ],
+    'PAGE_SIZE': 10
+}

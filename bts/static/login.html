@@ -1,0 +1,36 @@
+<html>
+<head>
+
+</head>
+
+<body>
+
+<div>
+	<div>
+		<input type="text" name="browser" id="login" value="">
+	</div>
+
+	<div>
+		<input type="password" name="browser" id="password" value="">
+	</div>	
+		<input type="submit" value="Login" onclick="onSubmit()">
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+function onSubmit(){
+	var login = $('#login').val();
+	alert(login);
+	var pass = $('#password').val();
+	$.post('/api/v1/auth', {login: login, password: pass}, function(resp){
+		console.log(resp);
+	});
+}
+
+
+ </script>
+
+
+</body>
+
+</html>

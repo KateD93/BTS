@@ -1,0 +1,7 @@
+HTTP/1.0 500 INTERNAL SERVER ERROR
+Date: Fri, 10 Mar 2017 14:24:37 GMT
+Server: WSGIServer/0.1 Python/2.7.12
+Vary: Cookie
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/plain
+
